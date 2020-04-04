@@ -1,4 +1,5 @@
 import csv
+import random
 import matplotlib.pyplot as plt
 
 def read(filename):
@@ -12,13 +13,6 @@ def read(filename):
         deaths = [int(r[2]) for r in rows]
 
     return header, days, cases, deaths
-
-def plot_single(x, y, title, x_title, y_title):
-    plt.plot(x, y, c='red', linewidth=2)
-    plt.title(f'Scottish Covid-19 {title} since Day 0 (02/03/20)')
-    plt.xlabel(x_title)
-    plt.ylabel(y_title)
-    plt.show()
 
 def plot_cases_vs_death(days, cases, deaths):
     cases_leg, = plt.plot(days, cases, c='red', label='Cases')
