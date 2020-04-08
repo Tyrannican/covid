@@ -15,8 +15,8 @@ def read(filename):
     return header, days, cases, deaths
 
 def plot_cases_vs_death(days, cases, deaths):
-    cases_leg, = plt.plot(days, cases, c='red', label='Cases')
-    deaths_leg, = plt.plot(days, deaths, c='black', label='Deaths')
+    cases_leg, = plt.plot(days, cases, color='red', label='Cases')
+    deaths_leg, = plt.plot(days, deaths, color='black', label='Deaths')
 
     plt.title('Covid-19 Cases and Deaths')
     plt.xlabel('Days since first reported case')
