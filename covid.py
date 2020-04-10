@@ -1,5 +1,4 @@
 import csv
-import random
 import matplotlib.pyplot as plt
 
 def read(filename):
