@@ -21,7 +21,7 @@ def plot_cases_vs_death(days, cases, deaths):
 
     plt.title('Covid-19 Cases and Deaths')
     plt.xlabel('Days since first reported case')
-    plt.ylabel('Cases & Deaths reported each day')
+    plt.ylabel('Daily Reported Cases & Deaths')
 
     plt.show()
 
