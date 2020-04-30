@@ -1,4 +1,5 @@
 import csv
+import pandas as pd
 import matplotlib.pyplot as plt
 
 def read(filename):
@@ -13,10 +14,17 @@ def read(filename):
 
     return header, days, cases, deaths
 
-def plot_cases_vs_death(days, cases, deaths):
+def plot_cases_vs_death(days, cases, deaths, avg_days=7):
+    cases_df, deaths_df = pd.DataFrame(cases), pd.DataFrame(deaths)
+    rolling_cases = cases_df.rolling(window=avg_days).mean()
+    rolling_deaths = deaths_df.rolling(window=avg_days).mean()
+
     ax = plt.subplot()
+
     lc = ax.bar(days, cases, color='orange', edgecolor='black', label='Cases')
     ld = ax.bar(days, deaths, color='black', label='Deaths')
+    ax.plot(rolling_cases, color="black")
+    ax.plot(rolling_deaths, color="red")
     ax.legend([lc, ld], ['Cases', 'Deaths'])
 
     plt.title('Covid-19 Cases and Deaths')
