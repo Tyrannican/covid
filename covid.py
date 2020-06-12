@@ -2,6 +2,7 @@ import csv
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 def read(filename):
     with open(filename) as f_d:
         reader = csv.reader(f_d, delimiter=',')
@@ -14,7 +15,8 @@ def read(filename):
 
     return header, days, cases, deaths
 
-def plot_cases_vs_death(days, cases, deaths, avg_days=7):
+
+def plot_cases_vs_death(days, cases, deaths, filename, avg_days=7):
     cases_df, deaths_df = pd.DataFrame(cases), pd.DataFrame(deaths)
     rolling_cases = cases_df.rolling(window=avg_days).mean()
     rolling_deaths = deaths_df.rolling(window=avg_days).mean()
@@ -31,13 +33,15 @@ def plot_cases_vs_death(days, cases, deaths, avg_days=7):
     plt.xlabel('Days since first reported case')
     plt.ylabel('Daily Reported Cases & Deaths')
 
-    plt.show()
+    pic = filename.replace('csv', 'png')
+    plt.savefig(pic, dpi=300)
+
 
 def main():
     import sys
     fn = sys.argv[1]
     _, days, cases, deaths = read(fn)
-    plot_cases_vs_death(days, cases, deaths)
+    plot_cases_vs_death(days, cases, deaths, fn)
     print(f'Cases: {sum(cases)}\tDeaths: {sum(deaths)}')
 
 
