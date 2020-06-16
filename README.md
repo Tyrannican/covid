@@ -1,5 +1,5 @@
 # Scottish Cases 16/06/20
 ![alt](scottish_cases.png)
 
-# UK Cases 15/06/20
+# UK Cases 16/06/20
 ![alt](uk_cases.png)
