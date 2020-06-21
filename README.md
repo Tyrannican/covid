@@ -1,4 +1,4 @@
-# Scottish Cases 20/06/20
+# Scottish Cases 21/06/20
 ![alt](scottish_cases.png)
 
 # UK Cases 20/06/20
