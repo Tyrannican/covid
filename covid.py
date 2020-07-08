@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 .. module:: covid
     :platforms: Windows, Unix
