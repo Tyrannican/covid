@@ -82,8 +82,8 @@ def plot_cases_vs_death(
     ld = ax.bar(days, deaths, color='black', label='Deaths')
 
     # PLot the rolling average
-    ax.plot(rolling_cases, color="black")
-    ax.plot(rolling_deaths, color="red")
+    ax.plot(rolling_cases, color="red")
+    ax.plot(rolling_deaths, color="orange")
 
     # Add a legend for flair
     ax.legend([lc, ld], ['Cases', 'Deaths'])
