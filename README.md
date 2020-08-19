@@ -1,3 +1,3 @@
-# Scottish Cases 18/08/20
+# Scottish Cases 19/08/20
 ![alt](scottish_cases.png)
 
