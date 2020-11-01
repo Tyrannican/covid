@@ -78,12 +78,12 @@ def plot_cases_vs_death(
     ax = plt.subplot()
 
     # Plot the cases and deaths
-    lc = ax.bar(days, cases, color='orange', edgecolor='black', label='Cases')
+    lc = ax.bar(days, cases, color='#3bc14a', label='Cases')
     ld = ax.bar(days, deaths, color='black', label='Deaths')
 
-    # PLot the rolling average
-    ax.plot(rolling_cases, color="red")
-    ax.plot(rolling_deaths, color="orange")
+    # Plot the rolling average
+    ax.plot(rolling_cases, color="#d81159")
+    ax.plot(rolling_deaths, color="#fc440f")
 
     # Add a legend for flair
     ax.legend([lc, ld], ['Cases', 'Deaths'])
