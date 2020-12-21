@@ -1,3 +1,3 @@
-# Scottish Cases 20/12/20
+# Scottish Cases 21/12/20
 ![alt](scottish_cases.png)
 
