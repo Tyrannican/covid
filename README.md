@@ -1,4 +1,4 @@
-# Scottish Cases 26/12/20
+# Scottish Cases 27/12/20
 
 No death data over festive period
 
