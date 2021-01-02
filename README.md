@@ -1,4 +1,4 @@
-# Scottish Cases 01/01/21
+# Scottish Cases 02/01/21
 
 No death data over festive period
 
