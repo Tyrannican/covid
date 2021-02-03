@@ -1,4 +1,4 @@
-# Scottish Cases 01/02/21
+# Scottish Cases 02/02/21
 
 ![alt](scottish_cases.png)
 
