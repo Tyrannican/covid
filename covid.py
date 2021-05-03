@@ -68,25 +68,27 @@ def plot_cases_vs_death(
     """
 
     # Load cases and deaths into Dataframes
-    cases_df, deaths_df = pd.DataFrame(cases), pd.DataFrame(deaths)
+    cases_df = pd.DataFrame(cases)
+    # deaths_df = pd.DataFrame(deaths)
 
     # Calculate the rolling average fro each
     rolling_cases = cases_df.rolling(window=avg_days).mean()
-    rolling_deaths = deaths_df.rolling(window=avg_days).mean()
+    # rolling_deaths = deaths_df.rolling(window=avg_days).mean()
 
     # Create a new plot
     ax = plt.subplot()
 
     # Plot the cases and deaths
     lc = ax.bar(days, cases, color='#3bc14a', label='Cases')
-    ld = ax.bar(days, deaths, color='black', label='Deaths')
+    # ld = ax.bar(days, deaths, color='black', label='Deaths')
 
     # Plot the rolling average
     ax.plot(rolling_cases, color="#d81159")
-    ax.plot(rolling_deaths, color="#fc440f")
+    # ax.plot(rolling_deaths, color="#fc440f")
 
     # Add a legend for flair
-    ax.legend([lc, ld], ['Cases', 'Deaths'])
+    ax.legend([lc], ['Cases'])
+    # ax.legend([lc, ld], ['Cases', 'Deaths'])
 
     # Labels
     plt.title('Covid-19 Cases and Deaths')
